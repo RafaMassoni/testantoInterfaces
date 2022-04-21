@@ -1,0 +1,53 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+</h:head>
+
+<h:body>
+
+    <h:form>
+
+
+
+    <p:outputPanel styleClass="ui-g" style="margin: 30px">
+
+        <div class="p-field p-col-12 p-md-4">
+         <p:outputLabel for="@next" value="Selecione a origem dos dados:" style="margin-right: 10px"/>
+        <p:selectOneMenu value="#{dashBoardBean.tipoApiSelecionado}">
+            <p:ajax event="change" process="@this" update="@form" listener="#{dashBoardBean.selecinarTipoDeAPI()}"/>
+            <f:selectItems value="#{dashBoardBean.tipoApiParaSelecao}" var="tipoAPI"
+                            itemLabel="#{tipoAPI.descricao}"/>
+        </p:selectOneMenu>
+
+        </div >
+
+        <p:commandButton value="Buscar dados" process="@this" update="@form" actionListener="#{dashBoardBean.buscarDados}" style="margin-left: 10px;margin-top: 0"/>
+
+
+        <p:outputPanel styleClass="ui-g-12">
+
+            <p:dataTable value="#{dashBoardBean.dados}" var="dado">
+
+                <f:facet name="header">
+                    Lista de notícias
+                </f:facet>
+
+                <p:column headerText="Título">
+                    <p:outputLabel value="#{dado}"/>
+                </p:column>
+
+            </p:dataTable>
+
+        </p:outputPanel>
+
+
+    </p:outputPanel>
+
+
+    </h:form>
+
+</h:body>
+</html>

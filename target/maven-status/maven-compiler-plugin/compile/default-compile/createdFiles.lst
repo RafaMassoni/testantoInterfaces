@@ -1,0 +1,12 @@
+com\br\interfaces\apis\enumerator\TipoApiEnumerator.class
+com\br\interfaces\padrao\HelloResource.class
+com\br\interfaces\padrao\HelloServlet.class
+com\br\interfaces\apis\implementacoes\ApiIntegracaoDadosFixosImp.class
+com\br\interfaces\padrao\HelloApplication.class
+com\br\interfaces\apis\implementacoes\ApiIntegracaoDadosFixosInversoImp.class
+com\br\interfaces\apis\interfaces\ApiIntegracaoInterface.class
+com\br\interfaces\apis\interfaces\ApiValidacaoInterface.class
+com\br\interfaces\DashBoardBean.class
+com\br\interfaces\apis\implementacoes\ApiIntegracaoDadosAleatoriosImp.class
+com\br\interfaces\apis\ApiFactory.class
+com\br\interfaces\apis\interfaces\ApiInterface.class
